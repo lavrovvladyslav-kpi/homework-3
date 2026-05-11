@@ -9,11 +9,10 @@ mask = arr > 0
 print("\nУсі додатні числа в масиві:\n", arr[mask])
 
 # 3. Замініть всі від’ємні значення на нулі.
-arr[arr < 0] = 0
-print("\nОновлений масив:\n", arr)
+arr_with0 = arr.copy()
+arr_with0[arr_with0 < 0] = 0
+print("\nОновлений масив:\n", arr_with0)
 
 # 4. Обчисліть середнє значення отриманого масиву.
-mean_value = np.mean(arr)
+mean_value = np.mean(arr_with0)
 print("\nCереднє значення:\n", mean_value)
-
-# Готово до перегляду
